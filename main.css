@@ -1,0 +1,76 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . header . ."
+      ". player1 . player2 ."
+      ". player1-score dice player2-score ."
+      ". player1-total buttons player2-total ."
+      ". . . . .";
+}
+
+.total {
+    background-color: red;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: buttons;
+}
+
+button {
+    width: 50px;
+}
+
+.player1 {
+    position: relative;
+}
+
+.player2 {
+    position: relative;
+}
+
+div.currentPlayer::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 33%;
+    top: 10%;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow:0px 0px 10px rgba(255, 0, 0, 0.445);
+    border: 1px solid rgba(255, 0, 0, 0.445);
+    -webkit-animation-name: clignote; 
+    -webkit-animation-duration: 1s; 
+    -webkit-animation-iteration-count:infinite; 
+}
+
+.header { 
+    grid-area: header; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player1 { grid-area: player1; }
+.player2 { grid-area: player2; }
+.player1-score { grid-area: player1-score; }
+.player2-score { grid-area: player2-score; }
+.dice { grid-area: dice; }
+.player1-total { grid-area: player1-total; }
+.player2-total { grid-area: player2-total; }
+
+@-webkit-keyframes clignote {
+    0%{box-shadow:0px 0px 30px rgba(255, 0, 0, 0.445);}
+    50%{box-shadow:0px 0px 0px rgba(255, 0, 0, 0.445);}
+    100%{box-shadow:0px 0px 30px rgba(255, 0, 0, 0.445);}
+    }

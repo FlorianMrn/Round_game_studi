@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="A wonderful game with vanilla JS!">
+    <title>Round Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="header">
+        <button id="new">New Game</button>
+    </header>
+    <!-- Main & titles -->
+    <div class="player1 currentPlayer">
+        <h2>Player 1</h2>
+    </div>
+    <div class="player2 ">
+        <h2>Player 2</h2>
+    </div>
+    <!-- Main & Scores -->
+    <div class="player1-score"></div>
+    <div class="player2-score"></div>
+    <!-- Main & Dice -->
+    <div class="dice">
+        <img class="img1" src="images/dice1.png" alt="dice"/>
+    </div>
+    <!-- Footer -->
+    <div class="total player1-total">
+        <h2>Cuurent Score</h2>
+        <p id="player1-total"></p>
+    </div>
+    <div class="total player2-total">
+        <h2>Cuurent Score</h2>
+        <p id="player2-total"></p>
+    </div>
+    <div class="buttons">
+        <button id="roll">Roll</button>
+        <button id="hold">hold</button>
+    </div>
+    <script src="app.js" async></script>
+</body>
+</html>
