@@ -18,7 +18,7 @@ body {
 }
 
 .total {
-    background-color: red;
+    background-color: #EB445A;
 }
 .buttons {
     display: flex;
@@ -29,7 +29,12 @@ body {
 }
 
 button {
-    width: 50px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: gray;
+    font-weight: 300;
+    border: none;
+    outline: none;
 }
 
 .player1 {
@@ -40,15 +45,25 @@ button {
     position: relative;
 }
 
+.player1 h2, .player2 h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+img {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 20px;
+}
+
 div.currentPlayer::after {
     content: '';
     position: absolute;
     width: 10px;
     height: 10px;
-    right: 33%;
+    right: 28%;
     top: 10%;
     border-radius: 50%;
-    background-color: red;
+    background-color: #EB445A;
     box-shadow:0px 0px 10px rgba(255, 0, 0, 0.445);
     border: 1px solid rgba(255, 0, 0, 0.445);
     -webkit-animation-name: clignote; 
@@ -67,8 +82,25 @@ div.currentPlayer::after {
 .player1-score { grid-area: player1-score; }
 .player2-score { grid-area: player2-score; }
 .dice { grid-area: dice; }
-.player1-total { grid-area: player1-total; }
-.player2-total { grid-area: player2-total; }
+.player1-total { grid-area: player1-total; width: 12rem;margin: auto;}
+.player2-total { grid-area: player2-total; width: 12rem;margin: auto;}
+
+.fa, .fas {
+    margin-right: 10px;
+    color: #EB445A;
+}
+
+.player1-score, .player2-score {
+    font-size: 5rem;
+    font-weight: 300;
+    color: #eb445a;
+}
+
+p#player1-total, p#player2-total {
+    color: #fff;
+    font-size: 2rem;
+    margin: 18px;
+}
 
 @-webkit-keyframes clignote {
     0%{box-shadow:0px 0px 30px rgba(255, 0, 0, 0.445);}

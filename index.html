@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="A wonderful game with vanilla JS!">
     <title>Round Game</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <header class="header">
-        <button id="new">New Game</button>
+        <button id="new"><i class="fas fa-plus"></i>New Game</button>
     </header>
     <!-- Main & titles -->
     <div class="player1 currentPlayer">
@@ -39,8 +43,8 @@
         <p id="player2-total"></p>
     </div>
     <div class="buttons">
-        <button id="roll">Roll</button>
-        <button id="hold">hold</button>
+        <button id="roll"><i class="fas fa-sync-alt"></i>Roll dice</button>
+        <button id="hold"><i class="fas fa-arrow-down"></i>hold</button>
     </div>
     <script src="app.js" async></script>
 </body>
